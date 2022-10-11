@@ -1,5 +1,6 @@
 package com.daterra.projetoint.controller;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -85,8 +86,15 @@ public class ProdutosController {
 			produtosRepository.deleteById(id);
 	}
 	
+	@GetMapping("/preco_maior/{preco}")
+	public ResponseEntity<List<Produtos>> getPrecoMaiorQue(@PathVariable BigDecimal preco){
+		return ResponseEntity.ok(produtosRepository.findByPrecoGreaterThanOrderByPreco(preco));
+	}
 	
-	
+	@GetMapping("/preco_menor/{preco}")
+	public ResponseEntity<List<Produtos>> getPrecoMenorQue(@PathVariable BigDecimal preco){
+		return ResponseEntity.ok(produtosRepository.findByPrecoLessThanOrderByPrecoDesc(preco));
+	}
 	
 	
 	
