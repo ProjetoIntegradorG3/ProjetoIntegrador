@@ -39,7 +39,7 @@ public class Usuario {
 	
 	@NotNull
 	@Size(min =  8, max = 8, message = "O atributo CEP aceita apenas dígitos numéricos")
-	private int cep;
+	private String  cep;
 
 	@Size(min = 11, max = 11 , message = "O atributo CPF deve ter no máximo 11 dígitos" )
 	private String cpf;
@@ -87,11 +87,11 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-	public int getCep() {
+	public String getCep() {
 		return cep;
 	}
 
-	public void setCep(int cep) {
+	public void setCep(String cep) {
 		this.cep = cep;
 	}
 
