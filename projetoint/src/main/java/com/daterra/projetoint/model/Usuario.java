@@ -39,7 +39,7 @@ public class Usuario {
 	
 	@NotNull
 	@Size(min =  8, max = 8, message = "O atributo CEP aceita apenas dígitos numéricos")
-	private String  cep;
+	private String cep;
 
 	@Size(min = 11, max = 11 , message = "O atributo CPF deve ter no máximo 11 dígitos" )
 	private String cpf;
