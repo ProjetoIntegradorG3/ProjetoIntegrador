@@ -36,7 +36,7 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
  throws Exception {
 http.authorizeRequests()
 .antMatchers("/usuarios/logar").permitAll()
-
+.antMatchers(HttpMethod.GET,"/produtos/all").permitAll()
 .antMatchers("/usuarios/cadastrar").permitAll()
 .antMatchers(HttpMethod.OPTIONS).permitAll()
 .anyRequest().authenticated()
