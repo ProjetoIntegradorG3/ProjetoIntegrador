@@ -39,7 +39,6 @@ http.authorizeRequests()
 
 .antMatchers("/usuarios/cadastrar").permitAll()
 .antMatchers(HttpMethod.OPTIONS).permitAll()
-.antMatchers(HttpMethod.GET,"/produtos/all").permitAll()
 .anyRequest().authenticated()
 .and().httpBasic()
 .and().sessionManagement()
