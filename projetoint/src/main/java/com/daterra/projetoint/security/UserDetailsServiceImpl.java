@@ -17,7 +17,7 @@ import com.daterra.projetoint.repository.UsuarioRepository;
 		@Override
 		public UserDetails loadUserByUsername(String userName)
 		throws UsernameNotFoundException {
-		Optional<Usuario> usuario = repository.findByLogin(userName);
+		Optional<Usuario> usuario = repository.findByUsuario(userName);
 		usuario.orElseThrow(() -> new UsernameNotFoundException(userName +
 		" não encontrado."));
 		return usuario.map(UserDetailsImpl::new).get();
