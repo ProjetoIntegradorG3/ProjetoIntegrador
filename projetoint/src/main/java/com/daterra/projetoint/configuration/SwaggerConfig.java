@@ -26,9 +26,9 @@ public class SwaggerConfig {
 							.name("DaTerra")
 							.url("https://projetoint.daterra.com"))
 					.contact(new Contact()
-							.name("Ana Paula Toledo")
-							.url("https://github.com/")
-							.email("email@email")))
+							.name("Cecília Naomi Nakamura")
+							.url("https://github.com/cecilianakamura")
+							.email("ceci.n.nakamura@gmail.com")))
 					.externalDocs(new ExternalDocumentation()
 							.description("Projeto Integrador E-commerce DaTerra")
 							.url("https://github.com/ProjetoIntegradorG3/ProjetoIntegrador"));
