@@ -16,6 +16,8 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 @Entity
 @Table(name = "tb_usuario")
 public class Usuario {
@@ -29,9 +31,10 @@ public class Usuario {
 	private String nome; 
 	
 	@NotBlank
+	@Schema(example = "email@email.com.br")
 	@Email
-	@Size(min = 3, max = 255, message = "O login nome deve ter no máximo 255 caracteres")
-	private String login;
+	@Size(min = 3, max = 255, message = "O usuário nome deve ter no máximo 255 caracteres")
+	private String usuario;
 	
 	@NotBlank
 	@Size(min = 7, max = 255, message = "A senha deve ter no máximo 255")
@@ -71,12 +74,13 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public String getLogin() {
-		return login;
+
+	public String getUsuario() {
+		return usuario;
 	}
 
-	public void setLogin(String login) {
-		this.login = login;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
 	public String getSenha() {

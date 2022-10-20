@@ -13,7 +13,7 @@ import com.daterra.projetoint.model.Usuario;
 		private String password;
 		private List<GrantedAuthority> authorities;
 		public UserDetailsImpl (Usuario user){
-		this.userName = user.getLogin();
+		this.userName = user.getUsuario();
 		this.password = user.getSenha();
 		}
 
